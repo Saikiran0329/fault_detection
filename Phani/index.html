@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fault Detection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-weight: 500;
+            cursor: default;
+        }
+
+        body {
+            background-image: url("/electricity-g7a69e9aa1_1920.jpg");
+            background-size: 100%;
+            background-position: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-decoration: underline;
+            margin-top: 1.5rem;
+        }
+
+        h3 {
+            display: inline-block;
+            font-size: 20px;
+            color: rgb(11, 17, 16);
+            cursor: default;
+        }
+
+        .container {
+            width: 98vw;
+            height: 90vh;
+            /* border: 1px solid red;   */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box1,
+        .box2 {
+            width: 40vw;
+            height: 43vh;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 25px 25px 25px rgba(0, 0, 0, .31);
+        }
+
+        .box1 {
+            border-right: none;
+            border-radius: 13px 0 0 13px;
+        }
+
+        .box2 {
+            width: 25vw;
+            border-left: none;
+            border-radius: 0 13px 13px 0;
+        }
+
+        .gap {
+            margin-bottom: 1.8rem;
+        }
+
+        .gap-right {
+            margin-right: 10px;
+        }
+
+        .gap-right-small {
+            margin-right: 5px;
+        }
+
+        .inner {
+            width: 20vw;
+            height: 17vw;
+            border: 1px solid black;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-box {
+            width: 5rem;
+            height: 1.5rem;
+            margin-right: 1rem;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: text;
+        }
+
+        .radio {
+            width: 0.9rem;
+            height: 0.9rem;
+            position: relative;
+            top: 2px;
+            cursor: pointer;
+        }
+
+        /* .button {
+            width: 7rem;
+            height: 2rem;
+            font-size: 15px;
+            border-radius: 9px;
+            color: #fff;
+            background: #26a9e0;
+            border: none;
+            cursor: pointer;
+        } */
+        #fault{
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transmission Line Fault Detection</h1>
+    <div class="container">
+        <div class="box1">
+            <div class="gap">
+                <h3 class="gap-right">Currents</h3>
+                    <input class="input-box" type="text">
+                    <input class="input-box" type="text">
+                    <input class="input-box" type="text">
+            </div>
+            <div class="gap">
+                <h3 class="gap-right">Voltages</h3>
+                <input class="input-box" type="text">
+                <input class="input-box" type="text">
+                <input class="input-box" type="text">
+            </div>
+            <div class="gap">
+                <h3 class="gap-right">Fault</h3>
+                <h3 class="gap-right-small">Yes</h3><input class="radio" type="radio" name="check">
+                <h3 class="gap-right-small">No</h3><input class="radio" type="radio" name="check">
+            </div>
+            <!-- <input class="button" type="button" value="Type of Fault"> -->
+            <div>
+                <h3 class="gap-right">Type of Fault</h3>
+                <input type="text" class="input-box" id="fault">
+            </div>
+
+        </div>
+        <div class="box2">
+            <div class="inner">
+                <h3>
+                    V vs I Graphs
+                </h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
